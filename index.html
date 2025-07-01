@@ -41,7 +41,7 @@
       z-index: 1;
     }
     header img {
-      max-width: 700px;
+      max-width: 800px;
       width: 100%;
       height: auto;
       display: block;
@@ -86,35 +86,6 @@
       border-left: 5px solid #001f3f;
       padding-left: 10px;
     }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      height: 200px;
-      margin-bottom: 2rem;
-    }
-    .carousel-images {
-      display: flex;
-      transition: transform 0.3s ease-in-out;
-    }
-    .carousel-images img {
-      min-width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.3);
-      color: white;
-      border: none;
-      font-size: 2rem;
-      padding: 0 10px;
-      cursor: pointer;
-    }
-    .carousel-btn.left { left: 0; }
-    .carousel-btn.right { right: 0; }
     footer {
       text-align: center;
       padding: 1rem;
@@ -144,34 +115,55 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Remaining content stays the same -->
-  <!-- Sections from mission to footer are unchanged -->
-
-  <section id="mission">
-    <h2 class="section-title">Our Mission</h2>
-    <div class="carousel">
-      <button class="carousel-btn left" onclick="moveSlide(this, -1)">&#10094;</button>
-      <div class="carousel-images">
-        <img src="mission1.jpg" alt="Mission Image 1">
-        <img src="mission2.jpg" alt="Mission Image 2">
-      </div>
-      <button class="carousel-btn right" onclick="moveSlide(this, 1)">&#10095;</button>
-    </div>
+  
+    <img src="wp9309635.webp" alt="Tokyo Skyline" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 1.5rem; border-radius: 8px;">
+    <p>The Spirito Foundation exists to uplift and connect generations through service, creativity, and compassion. Our mission is to bring visibility, dignity, and joy to older adults while empowering student leaders to make meaningful impact in their communities.</p>
+  </section>
   </section>
 
-  <!-- Additional sections are unchanged -->
-  <!-- ... -->
+  <section id="who">
+    <h2 class="section-title">Who We Are</h2>
+    <p>The Spirito Foundation is composed of passionate student leaders committed to improving the lives of older adults through creative programming, intergenerational engagement, and local community support.</p>
+  </section>
+
+  <section id="why">
+    <h2 class="section-title">Why We Care</h2>
+    <p>We believe every generation has something to offer—and something to gain. Our programs aim to bridge gaps, reduce isolation, and celebrate stories through meaningful connection.</p>
+  </section>
+
+  <section id="divisions">
+    <h2 class="section-title">Divisions</h2>
+    <p>The Spirito Foundation proudly supports student-led divisions at universities across the nation. These divisions carry out our mission by organizing service initiatives, engaging with local retirement communities, and fostering student leadership.</p>
+    <ul>
+      <li><strong>Tide4Tuscaloosa – University of Alabama:</strong> Our founding division focused on intergenerational connection through performance and engagement.</li>
+      <li><em>More coming soon!</em> Interested in starting a division at your university? <a href="#contact">Contact us here</a>.</li>
+    </ul>
+  </section>
+
+  <section id="volunteer">
+    <h2 class="section-title">Volunteer</h2>
+    <p>Join our growing network of volunteers and be a part of something bigger. Whether you're a student, community member, or professional, there's a role for you in helping us serve with heart and purpose.</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>We'd love to hear from you! Reach out to us using the form below or at <a href="mailto:thespiritofoundation@gmail.com">thespiritofoundation@gmail.com</a>.</p>
+    <form action="https://formsubmit.co/thespiritofoundation@gmail.com" method="POST">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+      <button type="submit" style="background-color: #001f3f; color: white; padding: 10px 20px; border: none; cursor: pointer;">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     &copy; 2025 The Spirito Foundation. All rights reserved.
   </footer>
-
-  <script>
-    function moveSlide(button, direction) {
-      const carousel = button.parentElement.querySelector('.carousel-images');
-      const width = carousel.offsetWidth;
-      carousel.scrollBy({ left: width * direction, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
